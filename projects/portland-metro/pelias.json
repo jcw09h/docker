@@ -30,10 +30,6 @@
       "pip": { "url": "http://pip:4200" },
       "interpolation": { "url": "http://interpolation:4300" },
       "libpostal": { "url": "http://libpostal:4400" }
-    },
-    "defaultParameters": {
-      "focus.point.lat": 45.52,
-      "focus.point.lon": -122.67
     }
   },
   "imports": {
@@ -54,28 +50,56 @@
     },
     "geonames": {
       "datapath": "/data/geonames",
-      "countryCode": "ALL"
+      "countryCode": "US"
     },
     "openstreetmap": {
       "download": [
-        { "sourceURL": "https://s3.amazonaws.com/metro-extracts.nextzen.org/portland_oregon.osm.pbf" }
+        { "sourceURL": "https://download.geofabrik.de/north-america/us/florida-latest.osm.pbf" }
       ],
       "leveldbpath": "/tmp",
       "datapath": "/data/openstreetmap",
       "import": [{
-        "filename": "portland_oregon.osm.pbf"
+        "filename": "florida-latest.osm.pbf"
       }]
     },
     "openaddresses": {
       "datapath": "/data/openaddresses",
       "files": [
-        "us/or/portland_metro.csv",
-        "us/or/city_of_salem.csv",
-        "us/or/marion_and_polk.csv",
-        "us/or/marion.csv",
-        "us/or/hood_river.csv",
-        "us/wa/city_of_richland.csv",
-        "us/wa/clark.csv"
+        "us/fl/_loveland.csv",
+        "us/fl/charlotte.csv",
+        "us/fl/city_of_gainesville.csv",
+        "us/fl/city_of_lakeland.csv",
+        "us/fl/city_of_west_palm_beach.csv",
+        "us/fl/clay.csv",
+        "us/fl/collier.csv",
+        "us/fl/desoto.csv",
+        "us/fl/duval.csv",
+        "us/fl/gulf.csv",
+        "us/fl/hernando.csv",
+        "us/fl/highlands.csv",
+        "us/fl/hillsborough.csv",
+        "us/fl/lake.csv",
+        "us/fl/lee.csv",
+        "us/fl/leon.csv",
+        "us/fl/manatee.csv",
+        "us/fl/marion.csv",
+        "us/fl/martin.csv",
+        "us/fl/miami.csv",
+        "us/fl/monroe.csv",
+        "us/fl/nassau.csv",
+        "us/fl/orange_county.csv",
+        "us/fl/osceola.csv",
+        "us/fl/palm_beach_county.csv",
+        "us/fl/pinellas.csv",
+        "us/fl/putnam.csv",
+        "us/fl/santa_rosa.csv",
+        "us/fl/sarasota.csv",
+        "us/fl/seminole.csv",
+        "us/fl/st-johns.csv",
+        "us/fl/st-lucie.csv",
+        "us/fl/statewide.csv",
+        "us/fl/statewide2.csv",
+        "us/fl/volusia.csv"
       ]
     },
     "polyline": {
@@ -87,69 +111,7 @@
       "importVenues": false,
       "importPostalcodes": true,
       "importPlace": [
-        "85688513",
-        "85688623"
-      ]
-    },
-    "transit": {
-      "datapath": "/data/transit",
-      "feeds": [
-        {
-          "layerId": "bikeshare",
-          "url": "http://biketownpdx.socialbicycles.com/opendata/station_information.json",
-          "filename": "BIKETOWN-hubs.json",
-          "agencyId": "BIKETOWN",
-          "agencyName": "BIKETOWN",
-          "layerName": "bikeshare"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://developer.trimet.org/schedule/gtfs.zip",
-          "filename": "TRIMET-stops.txt",
-          "agencyId": "TRIMET",
-          "agencyName": "TriMet",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://www.c-tran.com/images/Google/GoogleTransitUpload.zip",
-          "filename": "C-TRAN-stops.txt",
-          "agencyId": "C-TRAN",
-          "agencyName": "C-TRAN",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://oregon-gtfs.com/gtfs_data/rideconnection-or-us/rideconnection-or-us.zip",
-          "filename": "RIDECONNECTION-stops.txt",
-          "agencyId": "RIDECONNECTION",
-          "agencyName": "Ride Connection",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://oregon-gtfs.com/gtfs_data/sandy-or-us/sandy-or-us.zip",
-          "filename": "SAM-stops.txt",
-          "agencyId": "SAM",
-          "agencyName": "SAM",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://data.trilliumtransit.com/gtfs/wilsonville-or-us/wilsonville-or-us.zip",
-          "filename": "SMART-stops.txt",
-          "agencyId": "SMART",
-          "agencyName": "SMART",
-          "layerName": "Stop"
-        },
-        {
-          "layerId": "stops",
-          "url": "http://oregon-gtfs.com/gtfs_data/swanisland-or-us/swanisland-or-us.zip",
-          "filename": "SWAN-stops.txt",
-          "agencyId": "SWAN",
-          "agencyName": "Swan Island",
-          "layerName": "Stop"
-        }
+        "85688651"
       ]
     },
     "interpolation": {
@@ -157,13 +119,73 @@
         "tiger": {
           "datapath": "/data/tiger",
           "states": [
-            { "state_code": 41, "county_code": 67, "name": "Washington County, OR" },
-            { "state_code": 41, "county_code": 51, "name": "Multnomah County, OR" },
-            { "state_code": 41, "county_code": 5,  "name": "Clackamas County, OR" },
-            { "state_code": 41, "county_code": 71, "name": "Yamhill County, OR" },
-            { "state_code": 41, "county_code": 47, "name": "Marion County, OR" },
-            { "state_code": 41, "county_code": 53, "name": "Polk County, OR" },
-            { "state_code": 53, "county_code": 11, "name": "Clark County, WA" }
+            { "state_code": 12, "county_code": 1, "name": "Alachua County, FL" },
+            { "state_code": 12, "county_code": 3, "name": "Backer County, FL" },
+            { "state_code": 12, "county_code": 5, "name": "Bay County, FL" },
+            { "state_code": 12, "county_code": 7, "name": "Bradford County, FL" },
+            { "state_code": 12, "county_code": 9, "name": "Brevard County, FL" },
+            { "state_code": 12, "county_code": 11, "name": "Broward County, FL" },
+            { "state_code": 12, "county_code": 13, "name": "Calhoun County, FL" },
+            { "state_code": 12, "county_code": 15, "name": "Charlotte County, FL" },
+            { "state_code": 12, "county_code": 17, "name": "Citrus County, FL" },
+            { "state_code": 12, "county_code": 19, "name": "Clay County, FL" },
+            { "state_code": 12, "county_code": 21, "name": "Collier County, FL" },
+            { "state_code": 12, "county_code": 23, "name": "Columbia County, FL" },
+            { "state_code": 12, "county_code": 27, "name": "DeSoto County, FL" },
+            { "state_code": 12, "county_code": 29, "name": "Dixie County, FL" },
+            { "state_code": 12, "county_code": 31, "name": "Duval County, FL" },
+            { "state_code": 12, "county_code": 33, "name": "Escambia County, FL" },
+            { "state_code": 12, "county_code": 35, "name": "Flagler County, FL" },
+            { "state_code": 12, "county_code": 37, "name": "Franklin County, FL" },
+            { "state_code": 12, "county_code": 39, "name": "Gadsden County, FL" },
+            { "state_code": 12, "county_code": 41, "name": "Gilchrist County, FL" },
+            { "state_code": 12, "county_code": 43, "name": "Glades County, FL" },
+            { "state_code": 12, "county_code": 45, "name": "Gulf County, FL" },
+            { "state_code": 12, "county_code": 47, "name": "Hamilton County, FL" },
+            { "state_code": 12, "county_code": 49, "name": "Hardee County, FL" },
+            { "state_code": 12, "county_code": 51, "name": "Hendry County, FL" },
+            { "state_code": 12, "county_code": 53, "name": "Hernando County, FL" },
+            { "state_code": 12, "county_code": 55, "name": "Highland County, FL" },
+            { "state_code": 12, "county_code": 57, "name": "Hillsborough County, FL" },
+            { "state_code": 12, "county_code": 59, "name": "Holmes County, FL" },
+            { "state_code": 12, "county_code": 61, "name": "Indian River County, FL" },
+            { "state_code": 12, "county_code": 63, "name": "Jackson County, FL" },
+            { "state_code": 12, "county_code": 65, "name": "Jefferson County, FL" },
+            { "state_code": 12, "county_code": 67, "name": "Lafayette County, FL" },
+            { "state_code": 12, "county_code": 69, "name": "Lake County, FL" },
+            { "state_code": 12, "county_code": 71, "name": "Lee County, FL" },
+            { "state_code": 12, "county_code": 73, "name": "Leon County, FL" },
+            { "state_code": 12, "county_code": 75, "name": "Levy County, FL" },
+            { "state_code": 12, "county_code": 77, "name": "Liberty County, FL" },
+            { "state_code": 12, "county_code": 79, "name": "Madison County, FL" },
+            { "state_code": 12, "county_code": 81, "name": "Manatee County, FL" },
+            { "state_code": 12, "county_code": 83, "name": "Marion County, FL" },
+            { "state_code": 12, "county_code": 85, "name": "Martin County, FL" },
+            { "state_code": 12, "county_code": 86, "name": "Miami-Dade County, FL" },
+            { "state_code": 12, "county_code": 87, "name": "Monroe County, FL" },
+            { "state_code": 12, "county_code": 89, "name": "Nassau County, FL" },
+            { "state_code": 12, "county_code": 91, "name": "Okaloosa County, FL" },
+            { "state_code": 12, "county_code": 93, "name": "Okeechobee County, FL" },
+            { "state_code": 12, "county_code": 95, "name": "Orange County, FL" },
+            { "state_code": 12, "county_code": 97, "name": "Osceola County, FL" },
+            { "state_code": 12, "county_code": 99, "name": "Palm Beach County, FL" },
+            { "state_code": 12, "county_code": 101, "name": "Pasco County, FL" },
+            { "state_code": 12, "county_code": 103, "name": "Pinellas County, FL" },
+            { "state_code": 12, "county_code": 105, "name": "Polk County, FL" },
+            { "state_code": 12, "county_code": 107, "name": "Putnam County, FL" },
+            { "state_code": 12, "county_code": 109, "name": "St. Johns County, FL" },
+            { "state_code": 12, "county_code": 111, "name": "St. Lucie County, FL" },
+            { "state_code": 12, "county_code": 113, "name": "Santa Rosa County, FL" },
+            { "state_code": 12, "county_code": 115, "name": "Sarasota County, FL" },
+            { "state_code": 12, "county_code": 117, "name": "Seminole County, FL" },
+            { "state_code": 12, "county_code": 119, "name": "Sumter County, FL" },
+            { "state_code": 12, "county_code": 121, "name": "Suwannee County, FL" },
+            { "state_code": 12, "county_code": 123, "name": "Taylor County, FL" },
+            { "state_code": 12, "county_code": 125, "name": "Union County, FL" },
+            { "state_code": 12, "county_code": 127, "name": "Volusia County, FL" },
+            { "state_code": 12, "county_code": 129, "name": "Wakulla County, FL" },
+            { "state_code": 12, "county_code": 131, "name": "Walton County, FL" },
+            { "state_code": 12, "county_code": 133, "name": "Washington County, FL" },
           ]
         }
       }
